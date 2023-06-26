@@ -1,0 +1,184 @@
+[
+  {
+    "ts": "2023-06-26T13:35:32.620Z",
+    "level": "error",
+    "error": {
+      "name": "ValidationFailed",
+      "entity": {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "f7xg7kmhsht8"
+            }
+          },
+          "id": "author",
+          "type": "ContentType",
+          "createdAt": "2019-10-04T04:32:20.447Z",
+          "updatedAt": "2019-10-10T07:12:10.055Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 13,
+          "publishedAt": "2019-10-10T07:12:10.055Z",
+          "firstPublishedAt": "2019-10-04T04:32:21.176Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "6c3JqRMjO5p7Zoib9N2fmI"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "6c3JqRMjO5p7Zoib9N2fmI"
+            }
+          },
+          "publishedCounter": 7,
+          "version": 14,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "6c3JqRMjO5p7Zoib9N2fmI"
+            }
+          }
+        },
+        "displayField": "name",
+        "name": "Author",
+        "description": "",
+        "fields": [
+          {
+            "id": "user",
+            "name": "Username",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+              {
+                "unique": true
+              }
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "banner",
+            "name": "Banner Image",
+            "type": "Link",
+            "localized": false,
+            "required": true,
+            "validations": [
+              {
+                "linkMimetypeGroup": [
+                  "image"
+                ]
+              },
+              {
+                "assetImageDimensions": {
+                  "width": {
+                    "min": 1500,
+                    "max": 1500
+                  },
+                  "height": {
+                    "min": 788,
+                    "max": 788
+                  }
+                }
+              }
+            ],
+            "disabled": false,
+            "omitted": false,
+            "linkType": "Asset"
+          },
+          {
+            "id": "name",
+            "name": "Full Name",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "twitter",
+            "name": "Twitter (@user)",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+              {
+                "regexp": {
+                  "pattern": "(?<=^|(?<=[^a-zA-Z0-9-_\\.]))@([A-Za-z]+[A-Za-z0-9-_]+)",
+                  "flags": null
+                },
+                "message": "Twitter username is invalid"
+              }
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "facebook",
+            "name": "Facebook (https://facebook.com/user)",
+            "type": "Symbol",
+            "localized": false,
+            "required": false,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false
+          }
+        ]
+      },
+      "data": {
+        "status": 422,
+        "statusText": "Unprocessable Entity",
+        "message": "Validation error",
+        "details": {
+          "errors": [
+            {
+              "name": "invalid",
+              "details": "The property \"regexp\" is not valid",
+              "path": [
+                "fields",
+                3,
+                "validations",
+                0,
+                "regexp"
+              ],
+              "value": {
+                "pattern": "(?<=^|(?<=[^a-zA-Z0-9-_\\.]))@([A-Za-z]+[A-Za-z0-9-_]+)",
+                "flags": null
+              }
+            }
+          ]
+        },
+        "request": {
+          "url": "/spaces/7duh2pgz1m3w/environments/master/content_types/author",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.cli/2.6.22; feature space-import; sdk contentful-management.js/0.0.0-determined-by-semantic-release; platform node.js/v18.14.1; os Windows/v18.14.1;",
+            "CF-Sequence": "674dbc21-bd00-4b49-8aa8-db1cfef4c1bc",
+            "Authorization": "Bearer ...sV_MM",
+            "User-Agent": "axios/0.27.2",
+            "Content-Length": 1063
+          },
+          "method": "put",
+          "payloadData": "{\"displayField\":\"name\",\"name\":\"Author\",\"description\":\"\",\"fields\":[{\"id\":\"user\",\"name\":\"Username\",\"type\":\"Symbol\",\"localized\":false,\"required\":true,\"validations\":[{\"unique\":true}],\"disabled\":false,\"omitted\":false},{\"id\":\"banner\",\"name\":\"Banner Image\",\"type\":\"Link\",\"localized\":false,\"required\":true,\"validations\":[{\"linkMimetypeGroup\":[\"image\"]},{\"assetImageDimensions\":{\"width\":{\"min\":1500,\"max\":1500},\"height\":{\"min\":788,\"max\":788}}}],\"disabled\":false,\"omitted\":false,\"linkType\":\"Asset\"},{\"id\":\"name\",\"name\":\"Full Name\",\"type\":\"Symbol\",\"localized\":false,\"required\":true,\"validations\":[],\"disabled\":false,\"omitted\":false},{\"id\":\"twitter\",\"name\":\"Twitter (@user)\",\"type\":\"Symbol\",\"localized\":false,\"required\":true,\"validations\":[{\"regexp\":{\"pattern\":\"(?<=^|(?<=[^a-zA-Z0-9-_\\\\.]))@([A-Za-z]+[A-Za-z0-9-_]+)\",\"flags\":null},\"message\":\"Twitter username is invalid\"}],\"disabled\":false,\"omitted\":false},{\"id\":\"facebook\",\"name\":\"Facebook (https://facebook.com/user)\",\"type\":\"Symbol\",\"localized\":false,\"required\":false,\"validations\":[],\"disabled\":false,\"omitted\":false}]}"
+        },
+        "requestId": "0bf381c1-587b-413b-b8a7-928f9c0ff99b"
+      }
+    }
+  }
+]
