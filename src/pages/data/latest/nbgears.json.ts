@@ -4,7 +4,6 @@ export const get = async () => {
   const blogs = await getCollectionBlog()
 
   const processedItems = blogs
-    .filter(o => o.data.author === 'NB GEARS Teams')
     .slice(0, 12)
     .map(item => ({
       url: `/${item.slug}`,
