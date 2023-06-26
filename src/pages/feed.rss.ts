@@ -17,9 +17,9 @@ export const get = async () => {
   })
 
   return rss({
-    title: 'Riffy Blog',
-    description: 'The Nerdy Blogger',
-    site: 'https://blog.rayriffy.com',
+    title: 'NB GEARS Blog',
+    description: 'The Story of NB GEARS',
+    site: 'https://blog.nbgears.com',
     items: rssItems,
   })
 }
