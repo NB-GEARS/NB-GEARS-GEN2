@@ -18,10 +18,4 @@ export const headerNavationItems: HeaderNavationItem[] = [
     name: 'Category',
     disabled: true,
   },
-  {
-    key: 'music',
-    href: 'https://music.apple.com/jp/playlist/riffys-playlist/pl.u-gxblkLDC5PkYPXL',
-    name: '♪',
-    external: true,
-  },
 ]
