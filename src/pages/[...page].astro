@@ -74,7 +74,7 @@ const { page, featuredBlogPost } = Astro.props
         page.data.map(({ data, slug }, i) => (
           <a href={`/${slug}`} rel="prefetch">
             <div
-              class="relative overflow-hidden rounded-none bg-white shadow-lg sm:rounded-2xl"
+              class="relative overflow-hidden rounded-none bg-white dark:bg-[#332940] shadow-lg sm:rounded-2xl"
               style={`view-transition-name: blog-${slug}`}
             >
               {data.draft && (
@@ -92,16 +92,16 @@ const { page, featuredBlogPost } = Astro.props
                 fetchPriority="low"
               /></div>
               <div class="p-4 sm:p-6">
-                <h1 class="text-2xl text-gray-900">{data.title}</h1>
-                <p class="pt-1 text-gray-600">
+                <h1 class="text-2xl text-gray-900 dark:text-gray-50">{data.title}</h1>
+                <p class="pt-1 text-gray-600 dark:text-gray-200	">
                   Written by{' '}
-                  <span class="font-medium text-gray-800">{data.author}</span>{' '}
+                  <span class="font-medium text-gray-800 dark:text-gray-50 ">{data.author}</span>{' '}
                   on{' '}
-                  <span class="font-medium text-gray-800">
+                  <span class="font-medium text-gray-800 dark:text-gray-50">
                     {serializeDate(data.date)}
                   </span>
                 </p>
-                <p class="py-2 text-gray-600">{data.subtitle}</p>
+                <p class="py-2 text-gray-600 dark:text-gray-100">{data.subtitle}</p>
               </div>
             </div>
           </a>

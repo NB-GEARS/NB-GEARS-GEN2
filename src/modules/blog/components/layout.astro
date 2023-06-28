@@ -21,14 +21,14 @@ const { banner, title, subtitle } = data
         class="overflow-hidden rounded-none bg-white shadow-xl sm:rounded-2xl"
         style={`view-transition-name: blog-${slug}`}
       >
-        <Image
+        <div class="overflow-hidden flex  justify-center items-center"><Image
           src={banner.url}
           width={banner.width}
           height={banner.height}
           placeholder={banner.placeholder}
           alt="cover"
           fetchPriority="high"
-        />
+        /></div>
         <div class="py-8 px-4 sm:px-6 lg:px-8">
           <Heading {...Astro.props} />
 

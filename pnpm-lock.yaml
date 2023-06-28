@@ -1,5 +1,10 @@
 lockfileVersion: '6.0'
 
+dependencies:
+  pnpm:
+    specifier: ^8.6.5
+    version: 8.6.5
+
 devDependencies:
   '@astrojs/markdown-remark':
     specifier: ^2.2.1
@@ -2811,6 +2816,12 @@ packages:
     dependencies:
       find-up: 4.1.0
     dev: true
+
+  /pnpm@8.6.5:
+    resolution: {integrity: sha512-mztfvneJl4o9gCWfQlFKio6gVYhJbFazWUVBcomJ9u/yspwScHUxMyWvxOed1a543roo+aeIjp5VQkHOoTWFAg==}
+    engines: {node: '>=16.14'}
+    hasBin: true
+    dev: false
 
   /postcss-import@15.1.0(postcss@8.4.23):
     resolution: {integrity: sha512-hpr+J05B2FVYUAXHeK1YyI267J/dDDhMU6B6civm8hSY1jYJnBXxzKDKDswzJmtLHryrjhnDjqqp/49t8FALew==}
