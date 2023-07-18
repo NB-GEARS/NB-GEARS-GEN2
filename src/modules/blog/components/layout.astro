@@ -18,21 +18,25 @@ const { banner, title, subtitle } = data
   <div class="space-y-6">
     <div class="mx-auto max-w-4xl">
       <div
-        class="overflow-hidden rounded-none bg-white dark:bg-[#332940] shadow-xl sm:rounded-2xl"
+        class="overflow-hidden rounded-none bg-white shadow-xl dark:bg-[#332940] sm:rounded-2xl"
         style={`view-transition-name: blog-${slug}`}
       >
-        <div class="overflow-hidden flex  justify-center items-center "><Image
-          src={banner.url}
-          width={banner.width}
-          height={banner.height}
-          placeholder={banner.placeholder}
-          alt="cover"
-          fetchPriority="high"
-        /></div>
-        <div class="py-8 px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-center overflow-hidden">
+          <Image
+            src={banner.url}
+            width={banner.width}
+            height={banner.height}
+            placeholder={banner.placeholder}
+            alt="cover"
+            fetchPriority="high"
+          />
+        </div>
+        <div class="px-4 py-8 sm:px-6 lg:px-8">
           <Heading {...Astro.props} />
 
-          <article class="prose prose-blue mx-auto max-w-3xl pt-6 dark:text-gray-50">
+          <article
+            class="prose prose-blue mx-auto max-w-3xl pt-6 dark:text-gray-50"
+          >
             <slot />
           </article>
         </div>

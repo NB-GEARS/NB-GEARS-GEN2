@@ -8,7 +8,7 @@
       "$core/*": ["src/core/*"],
       "$modules/*": ["src/modules/*"],
       "$styles/*": ["src/styles/*"],
-      "@public/*" : ["public/*"]
+      "@public/*": ["public/*"]
     }
   }
 }

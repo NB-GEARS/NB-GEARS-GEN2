@@ -12,11 +12,15 @@ const { title, author, date, categories } = Astro.props.blog.data
 ---
 
 <section>
-  <h1 class="text-2xl text-gray-900 sm:text-4xl dark:text-gray-50">{title}</h1>
+  <h1 class="text-2xl text-gray-900 dark:text-gray-50 sm:text-4xl">{title}</h1>
   <p class="mt-2 text-gray-500 dark:text-gray-200">
-    Written by <span class="font-medium text-gray-600 dark:text-gray-50">{author}</span> on <span
-      class="font-medium text-gray-600 dark:text-gray-50">{serializeDate(date)}</span
-    > · <span class="font-medium text-gray-600 dark:text-gray-200">{Astro.props.minutesRead}</span>
+    Written by <span class="font-medium text-gray-600 dark:text-gray-50"
+      >{author}</span
+    > on <span class="font-medium text-gray-600 dark:text-gray-50"
+      >{serializeDate(date)}</span
+    > · <span class="font-medium text-gray-600 dark:text-gray-200"
+      >{Astro.props.minutesRead}</span
+    >
   </p>
   <div class="-mt-1 flex flex-wrap space-x-2 pt-3">
     {

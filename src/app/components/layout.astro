@@ -19,12 +19,13 @@ const {
   image = 'https://blog.nbgears.com/NBGEARSdefault.png',
 } = Astro.props
 
-const transformedTitle = title === '' ? 'NB GEARS Blog' : `NB GEARS Blog · ${title}`
+const transformedTitle =
+  title === '' ? 'NB GEARS Blog' : `NB GEARS Blog · ${title}`
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head class="h-full w-full dark:bg-[#121212]">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -54,7 +55,7 @@ const transformedTitle = title === '' ? 'NB GEARS Blog' : `NB GEARS Blog · ${ti
     <meta property="twitter:image" content={image} />
   </head>
   <body>
-    <div class="space-y-8 py-12 dark:bg-[#121212]		">
+    <div class="space-y-8 py-12 dark:bg-[#121212]">
       <header class="mx-auto max-w-md">
         <div class="flex justify-center">
           <a href="/" aria-label="Logo" rel="prefetch">
@@ -62,7 +63,7 @@ const transformedTitle = title === '' ? 'NB GEARS Blog' : `NB GEARS Blog · ${ti
           </a>
         </div>
         <div
-          class="flex select-none justify-center space-x-6 pt-4 text-sm uppercase text-gray-900 dark:text-gray-50 hover:text-gray-700"
+          class="flex select-none justify-center space-x-6 pt-4 text-sm uppercase text-gray-900 hover:text-gray-700 dark:text-gray-50"
         >
           {
             headerNavationItems.map(item =>

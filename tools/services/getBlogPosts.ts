@@ -49,7 +49,9 @@ export const getBlogPosts = async (
 
   console.log('fetching blogs from cms...')
 
-  const queryResult: RawQueryResult = await wretch(`https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`)
+  const queryResult: RawQueryResult = await wretch(
+    `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`
+  )
     .headers({
       Authorization: `Bearer ${
         preview

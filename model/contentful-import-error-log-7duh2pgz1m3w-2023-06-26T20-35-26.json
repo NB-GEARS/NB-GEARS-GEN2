@@ -77,9 +77,7 @@
             "required": true,
             "validations": [
               {
-                "linkMimetypeGroup": [
-                  "image"
-                ]
+                "linkMimetypeGroup": ["image"]
               },
               {
                 "assetImageDimensions": {
@@ -104,8 +102,7 @@
             "type": "Symbol",
             "localized": false,
             "required": true,
-            "validations": [
-            ],
+            "validations": [],
             "disabled": false,
             "omitted": false
           },
@@ -133,8 +130,7 @@
             "type": "Symbol",
             "localized": false,
             "required": false,
-            "validations": [
-            ],
+            "validations": [],
             "disabled": false,
             "omitted": false
           }
@@ -149,13 +145,7 @@
             {
               "name": "invalid",
               "details": "The property \"regexp\" is not valid",
-              "path": [
-                "fields",
-                3,
-                "validations",
-                0,
-                "regexp"
-              ],
+              "path": ["fields", 3, "validations", 0, "regexp"],
               "value": {
                 "pattern": "(?<=^|(?<=[^a-zA-Z0-9-_\\.]))@([A-Za-z]+[A-Za-z0-9-_]+)",
                 "flags": null

@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 
 import wretch from 'wretch'
-import QueryStringAddon from "wretch/addons/queryString"
+import QueryStringAddon from 'wretch/addons/queryString'
 import { selectAll } from 'unist-util-select'
 
 import { getHash } from './services/getHash'
@@ -40,7 +40,9 @@ export const iframeParser = () => {
         fs.mkdirSync(path.dirname(providerCache), {
           recursive: true,
         })
-      const providersRemote = await wretch('https://oembed.com/providers.json').get().json()
+      const providersRemote = await wretch('https://oembed.com/providers.json')
+        .get()
+        .json()
       fs.writeFileSync(providerCache, JSON.stringify(providersRemote))
     }
 
@@ -96,10 +98,12 @@ export const iframeParser = () => {
                 } else {
                   try {
                     // call api
-                    const oembedResult = await wretch(endpoint).addon(QueryStringAddon).query({
-                      format: 'json',
-                      url: extractedUrl,
-                    })
+                    const oembedResult = await wretch(endpoint)
+                      .addon(QueryStringAddon)
+                      .query({
+                        format: 'json',
+                        url: extractedUrl,
+                      })
 
                     if (!fs.existsSync(oembedCacheDirectory)) {
                       fs.mkdirSync(oembedCacheDirectory, {

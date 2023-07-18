@@ -9,7 +9,10 @@ interface BlurhashResponse {
   encoded: string
 }
 
-export const getBlurImage = async (image: Asset, attempt = 1): Promise<BlurhashResponse> => {
+export const getBlurImage = async (
+  image: Asset,
+  attempt = 1
+): Promise<BlurhashResponse> => {
   /*
     If blurhash token is not defined, then do manually
   */
@@ -60,7 +63,11 @@ export const getBlurImage = async (image: Asset, attempt = 1): Promise<BlurhashR
     }
   } catch (e) {
     if (attempt < 2) {
-      console.log(`attempt #${attempt} failed! performing attempt #${attempt + 1} in 10 seconds`)
+      console.log(
+        `attempt #${attempt} failed! performing attempt #${
+          attempt + 1
+        } in 10 seconds`
+      )
       await new Promise(r => setTimeout(r, 10000))
 
       return getBlurImage(image, attempt + 1)
