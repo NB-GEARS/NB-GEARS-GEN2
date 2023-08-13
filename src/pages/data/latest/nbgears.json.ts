@@ -17,8 +17,18 @@ export const get = async () => {
     featured: item.data.featured,
     categories: item.data.categories,
   }))
+  const response = new Response(JSON.stringify(processedItems), {
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Content-Type': 'application/json',
+    },
+  });
+
+
 
   return {
-    body: JSON.stringify(processedItems),
-  }
+    body: JSON.stringify(processedItems),response
+  };
+
+  
 }
