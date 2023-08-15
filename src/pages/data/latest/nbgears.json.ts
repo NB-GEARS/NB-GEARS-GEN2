@@ -4,7 +4,7 @@ export const get = async () => {
   const blogs = await getCollectionBlog()
 
   const processedItems = blogs.slice(0, 12).map(item => ({
-    url: `/${item.slug}`,
+    url: `/blog/${item.slug}`,
     banner: {
       url: item.data.banner.url,
       width: item.data.banner.width,
@@ -22,13 +22,10 @@ export const get = async () => {
       'Access-Control-Allow-Origin': '*',
       'Content-Type': 'application/json',
     },
-  });
-
-
+  })
 
   return {
-    body: JSON.stringify(processedItems),response
-  };
-
-  
+    body: JSON.stringify(processedItems),
+    response,
+  }
 }

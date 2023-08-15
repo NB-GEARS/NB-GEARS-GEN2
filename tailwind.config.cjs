@@ -15,6 +15,12 @@ module.exports = {
               marginTop: '0',
             },
           },
+          colors: {
+            siravijpp: '#554994',
+            siravijw: '#F29393',
+            siravijdw: '#C17575',
+            dwarn: '#332940',
+          },
         },
       },
       fontFamily: {

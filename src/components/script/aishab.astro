@@ -1,0 +1,134 @@
+<script>
+  // Predefined birthdate (YYYY/MM/DD format)
+  const predefinedBirthdate = '2003/07/29'
+
+  window.onload = function () {
+    calculateAge()
+  }
+
+  function calculateAge() {
+    const dateParts = predefinedBirthdate.split('/')
+    const birthYear = parseInt(dateParts[0])
+    const birthMonth = parseInt(dateParts[1])
+    const birthDay = parseInt(dateParts[2])
+
+    const today = new Date()
+    const todayYear = today.getFullYear()
+    const todayMonth = today.getMonth() + 1
+    const todayDay = today.getDate()
+
+    let ageYears = todayYear - birthYear
+    let ageMonths = todayMonth - birthMonth
+    let ageDays = todayDay - birthDay
+
+    // ... (previous code)
+
+    let debutYears = todayYear - 2019
+    let debutMonth = todayMonth - 7
+    let debutDays = todayDay - 29
+
+    // Adjust negative debutMonths and debutDays
+    if (debutDays < 0) {
+      debutMonth--
+      const daysInLastMonth = daysInMonth(todayMonth - 1, todayYear)
+      debutDays = daysInLastMonth - 29 + todayDay
+    }
+    if (ageDays < 0) {
+      ageMonths--
+      const daysInLastMonth = daysInMonth(todayMonth - 1, todayYear)
+      ageDays = daysInLastMonth - 29 + todayDay
+    }
+
+    if (debutMonth < 0) {
+      debutYears--
+      debutMonth += 12
+    }
+
+    let message = `(${ageYears} ขวบ, ${ageMonths} เดือน, และ ${ageDays} วัน)`
+    let age = `${ageYears}`
+    let debutAnnment = ``
+    let debutCount = `(${debutYears} ปี, ${debutMonth} เดือน,  และ ${debutDays} วัน) `
+
+    // ... (rest of the code remains the same)
+
+    // ... (continue with the rest of the code)
+
+    // ... (rest of the code remains the same)
+
+    if (ageMonths === 0 && ageDays === 0) {
+      debutCount +=
+        "<p class='bg-emerald-400 rounded-lg p-1 block xl:inline text-ellipsis text-sm md:text-xl'>สุขสันต์วันเกิดและครบรอบเดบิวต์ไอช่า!</p>"
+      debutAnnment +=
+        "<p class='bg-emerald-400 rounded-lg p-1 text-ellipsis text-center '>สุขสันต์วันเกิดและครบรอบเดต์บิวต์ไอช่า!</p>"
+    } else if (todayMonth === birthMonth && todayDay === birthDay) {
+      debutCount +=
+        "<p class='bg-emerald-400 rounded-lg p-1 block xl:inline text-ellipsis text-sm md:text-xl'>สุขสันต์วันเกิดและครบรอบเดบิวต์ไอช่า!</p>"
+      debutAnnment +=
+        "<p class='bg-emerald-400 rounded-lg p-1 text-ellipsis text-center '>สุขสันต์วันเกิดและครบรอบเดบิวต์ไอช่า!</p>"
+    } else if (todayMonth === birthMonth) {
+      debutCount +=
+        "<p class='bg-emerald-400 rounded-lg p-1 block xl:inline text-ellipsis text-sm md:text-xl'>สุขสันต์เดือนเกิดและเดือนเดบิวต์ไอช่า!</p>"
+      debutAnnment +=
+        "<p class='bg-emerald-400 rounded-lg p-1 text-ellipsis text-center '>สุขสันต์เดือนเกิดและครบรอบเดบิวต์ไอช่า!</p>"
+    }
+
+    document.getElementById('result').innerHTML = message
+    document.getElementById('age').innerHTML = age
+    document.getElementById('debutAnnment').innerHTML = debutAnnment
+    document.getElementById('annd').innerHTML = debutCount
+    setColor()
+  }
+
+  function setColor() {
+    const today = new Date()
+    const todayMonth = today.getMonth() + 1
+    const todayDay = today.getDate()
+    const birthMonth = parseInt(predefinedBirthdate.split('/')[1])
+    const birthDay = parseInt(predefinedBirthdate.split('/')[2])
+
+    const resultElement = document.getElementById('result')
+
+    if (
+      (todayMonth === birthMonth && todayDay === birthDay) ||
+      todayMonth === birthMonth
+    ) {
+      resultElement.classList.add('')
+    } else if (todayDay === birthDay) {
+      resultElement.classList.add('')
+    }
+  }
+
+  function adjustAge(
+    todayYear,
+    todayMonth,
+    todayDay,
+    birthYear,
+    birthMonth,
+    birthDay
+  ) {
+    let adjustedYears = todayYear - birthYear
+    let adjustedMonths = todayMonth - birthMonth
+    let adjustedDays = todayDay - birthDay
+
+    if (adjustedDays < 0) {
+      adjustedMonths--
+      const daysInLastMonth = daysInMonth(todayMonth - 1, todayYear)
+      adjustedDays = daysInLastMonth - birthDay + todayDay
+    }
+
+    if (adjustedMonths < 0) {
+      adjustedYears--
+      adjustedMonths += 12
+    }
+
+    return {
+      years: adjustedYears,
+      months: adjustedMonths,
+      days: adjustedDays,
+    }
+  }
+
+  function daysInMonth(month, year) {
+    return new Date(year, month, 0).getDate()
+  }
+</script>

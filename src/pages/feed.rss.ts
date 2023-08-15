@@ -10,16 +10,16 @@ export const get = async () => {
     return {
       title: data.title,
       description: data.subtitle ?? '',
-      link: `/${slug}`,
+      link: `/blog/${slug}`,
       pubDate: new Date(data.date),
       draft: data.draft,
     }
   })
 
   return rss({
-    title: 'NB GEARS Blog',
-    description: 'The Story of NB GEARS',
-    site: 'https://blog.nbgears.com',
+    title: 'Siravij Blog',
+    description: 'The Siravij Blog',
+    site: 'https://siravijbb.me/blog',
     items: rssItems,
   })
 }

@@ -1,0 +1,28 @@
+---
+import Navbar from '../components/Navbar.astro'
+import Layout from '../app/components/layout.astro'
+import Footer from '../components/footer.astro'
+---
+
+<head>
+  <Layout
+    title="Home"
+    ,
+    description="Siravij's Website"
+    ,
+    image="/full-body.webp"
+    ,
+  />
+</head>
+
+<body>
+  <Navbar />
+  <main class="mx-auto overflow-hidden bg-neutral-200 sm:h-full md:h-screen">
+    <img
+      src="Siravij-RedDepot.jpg"
+      alt="It's Me,Siravij!"
+      class="-mt-auto mx-auto -mb-20 w-full pt-10 sm:-mt-72 lg:-mt-96"
+    />
+    <style></style>
+  </main>
+</body>

@@ -2,6 +2,7 @@
 import Heading from './heading.astro'
 import AppLayout from '$app/components/layout.astro'
 import Image from '$core/components/image.astro'
+import Navbar from '../../../components/Navbar.astro'
 
 import type { CollectionEntry } from 'astro:content'
 
@@ -14,8 +15,9 @@ const { slug, data } = Astro.props.blog
 const { banner, title, subtitle } = data
 ---
 
-<AppLayout title={title} description={subtitle} image={banner.url}>
-  <div class="space-y-6">
+<Navbar />
+<div class="space-y-6">
+  <AppLayout title={title} description={subtitle} image={banner.url}>
     <div class="mx-auto max-w-4xl">
       <div
         class="overflow-hidden rounded-none bg-white shadow-xl dark:bg-[#332940] sm:rounded-2xl"
@@ -42,5 +44,5 @@ const { banner, title, subtitle } = data
         </div>
       </div>
     </div>
-  </div>
-</AppLayout>
+  </AppLayout>
+</div>

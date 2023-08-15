@@ -17,11 +17,7 @@ export default defineConfig({
     sitemap({
       filter: page => !page.includes('/pages/'),
     }),
-    tailwind({
-      config: {
-        applyBaseStyles: false,
-      },
-    }),
+    tailwind(),
   ],
   markdown: {
     remarkPlugins: [iframeParser, imageParser, readingTime],

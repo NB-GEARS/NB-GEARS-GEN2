@@ -1,11 +1,6 @@
 ---
-import Logo from './logo.astro'
-import Footer from './footer.astro'
-
-import { headerNavationItems } from '../constants/headerNavationItems'
-
-import '$styles/tailwind.css'
-import '$styles/font.css'
+import Navbar from '../../components/Navbar.astro'
+import Footer from '../components/Footer.astro'
 
 export interface Props {
   title?: string
@@ -15,27 +10,28 @@ export interface Props {
 
 const {
   title = '',
-  description = 'NB GEARS',
-  image = 'https://blog.nbgears.com/NBGEARSdefault.png',
+  description = 'Siravij Personal Website',
+  image = '',
 } = Astro.props
 
 const transformedTitle =
-  title === '' ? 'NB GEARS Blog' : `NB GEARS Blog · ${title}`
+  title === '' ? 'Siravij Personal Website' : `Siravij · ${title}`
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-  <head class="h-full w-full dark:bg-[#121212]">
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="view-transition" content="same-origin" />
-
-    <link rel="icon" href="/favicon.png" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.jpg" />
+    <meta name="generator" content={Astro.generator} />
     <title>{transformedTitle}</title>
 
     <meta name="title" content={transformedTitle} />
@@ -53,39 +49,37 @@ const transformedTitle =
 
     <meta property="og:image" content={image} />
     <meta property="twitter:image" content={image} />
-  </head>
-  <body>
-    <div class="space-y-8 py-12 dark:bg-[#121212]">
-      <header class="mx-auto max-w-md">
-        <div class="flex justify-center">
-          <a href="/" aria-label="Logo" rel="prefetch">
-            <Logo className="w-16 md:w-20" />
-          </a>
-        </div>
-        <div
-          class="flex select-none justify-center space-x-6 pt-4 text-sm uppercase text-gray-900 hover:text-gray-700 dark:text-gray-50"
-        >
-          {
-            headerNavationItems.map(item =>
-              item.disabled ? (
-                <span class="cursor-not-allowed">{item.name}</span>
-              ) : item.external ? (
-                <a href={item.href} target="_blank" rel="noopener noreferrer">
-                  {item.name}
-                </a>
-              ) : (
-                <a href={item.href} rel="prefetch">
-                  {item.name}
-                </a>
-              )
-            )
-          }
-        </div>
-      </header>
-      <main>
-        <slot />
-      </main>
-      <Footer />
-    </div>
+    <script
+      is:inline
+      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"
+    ></script></head
+  >
+
+  <body class="h-screen w-screen bg-white dark:bg-[#121212]">
+    <slot />
   </body>
+
+  <style is:global>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped&family=IBM+Plex+Sans+Thai:wght@500&display=swap');
+    body {
+      font-family: 'IBM Plex Sans Thai', 'IBM Plex Sans Thai Looped', sans-serif;
+    }
+    :root {
+      --accent: 124, 58, 237;
+      --accent-gradient: linear-gradient(
+        45deg,
+        rgb(var(--accent)),
+        #da62c4 30%,
+        white 60%
+      );
+    }
+    html {
+      font-family: system-ui, sans-serif;
+      background-color: #f6f6f6;
+    }
+    code {
+      font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+        DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+    }
+  </style>
 </html>
