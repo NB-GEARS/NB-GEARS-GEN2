@@ -3,6 +3,7 @@ import Heading from './heading.astro'
 import AppLayout from '$app/components/layout.astro'
 import Image from '$core/components/image.astro'
 import Navbar from '../../../components/Navbar.astro'
+import Footer from '../../../components/Footer.astro'
 
 import type { CollectionEntry } from 'astro:content'
 
@@ -33,11 +34,11 @@ const { banner, title, subtitle } = data
             fetchPriority="high"
           />
         </div>
-        <div class="px-4 py-8 sm:px-6 lg:px-8">
+        <div class="px-4 py-8 dark:text-gray-50 sm:px-6 lg:px-8">
           <Heading {...Astro.props} />
 
           <article
-            class="prose prose-blue mx-auto max-w-3xl pt-6 dark:text-gray-50"
+            class="prose prose-blue mx-auto max-w-3xl pt-6 dark:prose-invert dark:text-gray-50"
           >
             <slot />
           </article>
@@ -45,4 +46,5 @@ const { banner, title, subtitle } = data
       </div>
     </div>
   </AppLayout>
+  <Footer />
 </div>

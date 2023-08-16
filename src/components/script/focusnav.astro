@@ -27,24 +27,19 @@
     )
   }
 
-  // Get the current URL hash
-  const currentHash = window.location.hash
+  // Get the current URL path
+  const currentPath = window.location.pathname
 
   // Check for different pages and highlight corresponding links
-  if (currentHash === '#FAQ') {
-    highlightLink('a[href="/#FAQ"]')
-    highlightLink('#dropdownNavbarLink')
-  } else if (currentHash === '#channels') {
-    highlightLink('a[href="/#channels"]')
-    highlightLink('#dropdownNavbarLink')
-  }
-  // Add more links to highlight for the "other-page" here if needed
-  else if (currentHash === '#model') {
-    highlightLink('a[href="/#model"]')
-    highlightLink('#dropdownNavbarLink')
-  } else if (currentHash === '#songs') {
-    highlightLink('a[href="/#songs"]')
-    highlightLink('#dropdownNavbarLink')
+  if (currentPath.includes('/blog')) {
+    highlightLink('a[href="/blog"]')
+  } else if (currentPath.includes('/time')) {
+    highlightLink('a[href="/time"]')
+
+    // Add more links to highlight for the "other-page" here if needed
+  } else if (currentPath.includes('/#another-page')) {
+    highlightLink('a[href="/another-page"]')
+    // highlightLink("#dropdownNavbarLink");
   } else {
     // Default highlighting for the home page
     highlightLink('a[href="/"]')
