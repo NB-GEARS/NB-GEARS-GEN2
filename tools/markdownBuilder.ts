@@ -30,7 +30,7 @@ const stringifyArray = (strings: (string | number)[]) => {
             title: `"${blogPost.title.replace(/\"/g, '\\"')}"`,
             subtitle: `"${blogPost.subtitle}"`,
             date: blogPost.date,
-            author: blogPost.author.name,
+            author: blogPost.author ? blogPost.author.name : 'Unknown Author',
             categories: stringifyArray(
               blogPost.categoryCollection.items.map(o => o.name)
             ),
