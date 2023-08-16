@@ -8,14 +8,9 @@ export interface Props {
   image?: string
 }
 
-const {
-  title = '',
-  description = 'Siravij Personal Website',
-  image = '',
-} = Astro.props
+const { title = '', description = 'Siravij Blog', image = '' } = Astro.props
 
-const transformedTitle =
-  title === '' ? 'Siravij Personal Website' : `Siravij · ${title}`
+const transformedTitle = title === '' ? 'Siravij Blog' : `Siravij · ${title}`
 ---
 
 <!DOCTYPE html>

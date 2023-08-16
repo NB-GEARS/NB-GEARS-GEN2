@@ -18,7 +18,7 @@ const { banner, title, subtitle } = data
 
 <Navbar />
 <div class="space-y-6">
-  <AppLayout title={title} description={subtitle} image={banner.url}>
+  <AppLayout title={title} description={subtitle} image="/favicon.jpg">
     <div class="mx-auto max-w-7xl">
       <div
         class="overflow-hidden rounded-none bg-white shadow-xl dark:bg-[#332940] sm:rounded-2xl"
@@ -27,8 +27,8 @@ const { banner, title, subtitle } = data
         <div class="flex items-center justify-center overflow-hidden">
           <Image
             src={banner.url}
-            width={banner.width}
-            height={banner.height}
+            width="full"
+            height="auto"
             placeholder={banner.placeholder}
             alt="cover"
             fetchPriority="high"
