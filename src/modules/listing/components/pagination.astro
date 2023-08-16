@@ -8,7 +8,7 @@ export interface Props {
   prefix?: string
 }
 
-const { max, current, className, prefix = '/' } = Astro.props
+const { max, current, className, prefix = '/blog/' } = Astro.props
 
 const pageLength = max > 5 ? 5 : max
 const startPoint =
