@@ -1,6 +1,6 @@
 ---
 import Navbar from '../../components/Navbar.astro'
-import Layout from '../../app/components/layout.astro'
+import Layout from '../../components/layout.astro'
 import Footer from '../../components/Footer.astro'
 ---
 
@@ -13,101 +13,102 @@ import Footer from '../../components/Footer.astro'
     image="/full-body.webp"
     ,
   />
-  <Navbar />
-  <main
-    class="mx-auto my-[40px] -mb-0 max-w-7xl rounded-xl bg-neutral-200 pb-4 shadow-xl dark:bg-[#332940]"
-  >
-    <div class="-mt-10">
-      <div class="mx-auto rounded-xl py-4 sm:px-6 lg:px-8">
-        <div
-          class="text-ellipsis rounded-lg bg-white pt-4 shadow-xl dark:bg-[#332940]"
-        >
-          <p class="text-center text-2xl dark:text-gray-300">My availability</p>
-          <div class="grid gap-1 p-4 py-2 sm:grid-cols-1 md:grid-cols-3">
+</head>
+<Navbar />
+
+<main
+  class="mx-auto my-[40px] -mb-0 mt-14 max-w-7xl rounded-xl bg-neutral-200 pb-4 shadow-xl dark:bg-[#121212]"
+>
+  <div class="-mt-10">
+    <div class="mx-auto rounded-xl py-4 sm:px-6 lg:px-8">
+      <div
+        class="text-ellipsis rounded-lg bg-white pt-4 shadow-xl dark:bg-[#121212]"
+      >
+        <p class="text-center text-2xl dark:text-gray-300">My availability</p>
+        <div class="grid gap-1 p-4 py-2 sm:grid-cols-1 md:grid-cols-3">
+          <p
+            class="dark:shadow-white-500/40 m-1 cursor-default rounded-xl bg-green-500 p-2 text-base shadow-xl hover:bg-gray-400 dark:text-[#03001c] sm:text-left md:text-center md:text-2xl"
+          >
+            Facebook
+          </p>
+          <p
+            class="m-1 cursor-default rounded-xl bg-green-500 p-2 text-base shadow-xl hover:bg-gray-400 dark:text-[#03001c] sm:text-left md:text-center md:text-2xl"
+          >
+            Twitter
+          </p>
+          <p
+            class="m-1 cursor-no-drop rounded-xl bg-green-500 p-2 text-base shadow-xl hover:bg-gray-400 dark:text-[#03001c] sm:text-left md:text-center md:text-2xl"
+          >
+            Instragram
+          </p>
+
+          <div class="grid grid-cols-3 gap-1 px-4 text-left md:grid-cols-1">
             <p
-              class="dark:shadow-white-500/40 m-1 cursor-default rounded-xl bg-green-500 p-2 text-base shadow-xl hover:bg-gray-400 dark:text-[#03001c] sm:text-left md:text-center md:text-2xl"
+              class="rounded-lg bg-red-500 p-2 pt-1 text-center text-xs sm:my-1 md:my-0.5 md:ml-1 md:inline md:w-48 md:pb-0 md:pt-0"
             >
-              Facebook
+              Red:Not Available
             </p>
             <p
-              class="m-1 cursor-default rounded-xl bg-green-500 p-2 text-base shadow-xl hover:bg-gray-400 dark:text-[#03001c] sm:text-left md:text-center md:text-2xl"
+              class="rounded-lg bg-[#ECA869] p-2 pt-1 text-center text-xs sm:my-1 md:my-0.5 md:ml-1 md:inline md:w-48 md:pb-0 md:pt-0"
             >
-              Twitter
+              Yellow:Patial Available
             </p>
             <p
-              class="m-1 cursor-no-drop rounded-xl bg-green-500 p-2 text-base shadow-xl hover:bg-gray-400 dark:text-[#03001c] sm:text-left md:text-center md:text-2xl"
+              class="rounded-lg bg-green-500 p-2 pt-1 text-center text-xs sm:my-1 md:my-0.5 md:ml-1 md:inline md:w-48 md:pb-0 md:pt-0"
             >
-              Instragram
+              Green:Available
             </p>
 
-            <div class="grid grid-cols-3 gap-1 px-4 text-left md:grid-cols-1">
-              <p
-                class="rounded-lg bg-red-500 p-2 pt-1 text-center text-xs sm:my-1 md:my-0.5 md:ml-1 md:inline md:w-48 md:pb-0 md:pt-0"
-              >
-                Red:Not Available
-              </p>
-              <p
-                class="rounded-lg bg-[#ECA869] p-2 pt-1 text-center text-xs sm:my-1 md:my-0.5 md:ml-1 md:inline md:w-48 md:pb-0 md:pt-0"
-              >
-                Yellow:Patial Available
-              </p>
-              <p
-                class="rounded-lg bg-green-500 p-2 pt-1 text-center text-xs sm:my-1 md:my-0.5 md:ml-1 md:inline md:w-48 md:pb-0 md:pt-0"
-              >
-                Green:Available
-              </p>
-
-              <p
-                class="darkmo flex px-6 py-1 text-xs dark:text-gray-200 md:text-sm"
-              >
-                Updated: 7/10/2023
-              </p>
-            </div>
-          </div>
-          <div class="mx-auto items-center">
-            <div>
-              <iframe
-                class="map mx-auto px-4"
-                src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23E67C73&ctz=Asia%2FBangkok&showNav=1&showTitle=0&showDate=1&showTabs=0&showPrint=0&showTz=0&showCalendars=0&src=c2lyYXZpamJiQGdtYWlsLmNvbQ&color=%237986CB"
-                title="availability Map"
-                width="100%"
-                height="450"
-                style=""
-                loading="lazy"
-                allowfullscreen></iframe>
-            </div>
-            <div>
-              <!-- Google Calendar Appointment Scheduling begin -->
-              <iframe
-                class="map mx-auto shadow-xl"
-                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3tryV4X0Y-fZDqoJNZO2JWH1gATAVoK3AY3wKaXkDNAc3XNH9iORsGQH61ulew0-Pt86MJy0_O?gv=true"
-                title="availability Map"
-                width="80%"
-                height="450"
-                style=""
-                loading="lazy"
-                allowfullscreen></iframe>
-              <!-- end Google Calendar Appointment Scheduling -->
-            </div>
-          </div>
-          <div class="hover:bg-gray-400">
-            <a
-              target="_blank"
-              href="https://calendar.google.com/calendar/render?action=TEMPLATE&add=siravijbb@gmail.com&text=Request+Meet/Talk+About+XXXX+At+DDMMYYYY"
-              ><p
-                class="mx-4 my-2 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-4 px-4 text-center text-2xl shadow-xl"
-              >
-                Request Advance Booking
-              </p></a
+            <p
+              class="darkmo flex px-6 py-1 text-xs dark:text-gray-200 md:text-sm"
             >
+              Updated: 7/10/2023
+            </p>
           </div>
-          <div class="grid gap-1 py-2 sm:grid-cols-1 md:grid-cols-1"></div>
         </div>
+        <div class="mx-auto items-center">
+          <div>
+            <iframe
+              class="map mx-auto px-4"
+              src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23E67C73&ctz=Asia%2FBangkok&showNav=1&showTitle=0&showDate=1&showTabs=0&showPrint=0&showTz=0&showCalendars=0&src=c2lyYXZpamJiQGdtYWlsLmNvbQ&color=%237986CB"
+              title="availability Map"
+              width="100%"
+              height="450"
+              style=""
+              loading="lazy"
+              allowfullscreen></iframe>
+          </div>
+          <div>
+            <!-- Google Calendar Appointment Scheduling begin -->
+            <iframe
+              class="map mx-auto shadow-xl"
+              src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3tryV4X0Y-fZDqoJNZO2JWH1gATAVoK3AY3wKaXkDNAc3XNH9iORsGQH61ulew0-Pt86MJy0_O?gv=true"
+              title="availability Map"
+              width="80%"
+              height="450"
+              style=""
+              loading="lazy"
+              allowfullscreen></iframe>
+            <!-- end Google Calendar Appointment Scheduling -->
+          </div>
+        </div>
+        <div class="hover:bg-gray-400">
+          <a
+            target="_blank"
+            href="https://calendar.google.com/calendar/render?action=TEMPLATE&add=siravijbb@gmail.com&text=Request+Meet/Talk+About+XXXX+At+DDMMYYYY"
+            ><p
+              class="mx-4 my-2 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-4 px-4 text-center text-2xl shadow-xl"
+            >
+              Request Advance Booking
+            </p></a
+          >
+        </div>
+        <div class="grid gap-1 py-2 sm:grid-cols-1 md:grid-cols-1"></div>
       </div>
     </div>
-    <div class="mt-8"><Footer /></div>
-  </main>
-</head>
+  </div>
+  <div class="-mb-4 mt-8"><Footer /></div>
+</main>
 
 <style>
   @media (prefers-color-scheme: dark) {

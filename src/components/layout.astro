@@ -1,0 +1,85 @@
+---
+import Navbar from './Navbar.astro'
+import Footer from './Footer.astro'
+
+export interface Props {
+  title?: string
+  description?: string
+  image?: string
+}
+
+const {
+  title = '',
+  description = 'Siravij Personal Website',
+  image = '',
+} = Astro.props
+
+const transformedTitle =
+  title === '' ? 'Siravij Personal Website' : `Siravij · ${title}`
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.jpg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{transformedTitle}</title>
+
+    <meta name="title" content={transformedTitle} />
+    <meta name="description" content={description} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={transformedTitle} />
+    <meta property="og:description" content={description} />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={transformedTitle} />
+    <meta property="twitter:description" content={description} />
+
+    <meta property="og:image" content={image} />
+    <meta property="twitter:image" content={image} />
+    <script
+      is:inline
+      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"
+    ></script></head
+  >
+
+  <body class="h-full w-full bg-white dark:bg-[#332940]">
+    <slot />
+  </body>
+
+  <style is:global>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped&family=IBM+Plex+Sans+Thai:wght@500&display=swap');
+    body {
+      font-family: 'IBM Plex Sans Thai', 'IBM Plex Sans Thai Looped', sans-serif;
+    }
+    :root {
+      --accent: 124, 58, 237;
+      --accent-gradient: linear-gradient(
+        45deg,
+        rgb(var(--accent)),
+        #da62c4 30%,
+        white 60%
+      );
+    }
+    html {
+      font-family: system-ui, sans-serif;
+      background-color: #f6f6f6;
+    }
+    code {
+      font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+        DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+    }
+  </style>
+</html>
