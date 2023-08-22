@@ -64,7 +64,7 @@ const generateSourceSet = (url: string, type: CDNImageType) =>
     <img
       src={typeof src === 'string' ? getContentfulURL(src, 'jpg') : undefined}
       loading={loading}
-      class="absolute"
+      class="absolute w-full"
       {...rest}
     />
   </picture>

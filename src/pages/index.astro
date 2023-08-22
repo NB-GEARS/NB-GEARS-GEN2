@@ -17,12 +17,231 @@ import Footer from '../components/footer.astro'
 
 <body>
   <Navbar />
-  <main class="mx-auto overflow-hidden bg-neutral-200 sm:h-full md:h-screen">
-    <img
-      src="Siravij-RedDepot.jpg"
-      alt="It's Me,Siravij!"
-      class="-mt-auto mx-auto -mb-20 w-full pt-10 sm:-mt-72 lg:-mt-96"
-    />
-    <style></style>
-  </main>
+  <main
+  class="mx-auto my-[40px] -mb-0 mt-14 max-w-7xl rounded-xl bg-neutral-200 pb-4 shadow-xl dark:bg-[#121212]"
+>
+  <div class="-mt-10">
+    <div class="mx-auto rounded-xl py-4 sm:px-6 lg:px-8">
+
+      <div
+        class="text-ellipsis rounded-lg bg-white pt-4 shadow-xl dark:bg-[#121212]"
+      >
+      
+      <div class="coro z-50">
+
+        <div id="animation-carousel" class="relative w-full" data-carousel="static">
+          <!-- Carousel wrapper -->
+          <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+               <!-- Item 1 -->
+              <div class="hidden duration-200 ease-linear" data-carousel-item>
+                <img
+                src="/corosel/1.jpg"
+                class="h-32 md:h-96 absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+              />
+              </div>
+              <!-- Item 2 -->
+              <div class="hidden duration-200 ease-linear" data-carousel-item>
+                <img
+                src="/corosel/2.jpg"
+                class="h-32 md:h-96 absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+              />
+              </div>
+              <!-- Item 3 -->
+              <div class="hidden duration-200 ease-linear" data-carousel-item="active">
+                <img
+                src="/corosel/3.jpg"
+                class="h-32 md:h-96 absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+              />
+              </div>
+              <!-- Item 4 -->
+              <div class="hidden duration-200 ease-linear" data-carousel-item>
+                <img
+                src="/corosel/4.jpg"
+                class="h-32 md:h-96 absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+              />
+              </div>
+              <!-- Item 5 -->
+              <div class="hidden duration-200 ease-linear" data-carousel-item>
+                <img
+                src="/corosel/5.jpg"
+                class="h-32 md:h-96 absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+              />
+              </div>
+              <!-- Item 6 -->
+              <div class="hidden duration-200 ease-linear" data-carousel-item>
+                <img
+                src="/corosel/6.jpg"
+                class="h-32 md:h-96 absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+              />
+              </div>
+          </div>
+          <!-- Slider controls -->
+          <button
+          type="button"
+          class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-prev
+        >
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-500 dark:bg-gray-800/30 group-hover:bg-gray-800 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+          >
+            <svg
+              class="w-4 h-4 text-white dark:text-gray-800"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 1 1 5l4 4"></path>
+            </svg>
+            <span class="sr-only">Previous</span>
+          </span>
+        </button>
+        <button
+          type="button"
+          class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-next
+        >
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-500 dark:bg-gray-800/30 group-hover:bg-gray-800 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+          >
+            <svg
+              class="w-4 h-4 text-white dark:text-gray-800"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 9 4-4-4-4"></path>
+            </svg>
+            <span class="sr-only">Next</span>
+          </span>
+        </button>
+        <div
+        class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2 bg-gray-800/70"
+      >
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full"
+          aria-current="true"
+          aria-label="Slide 1"
+          data-carousel-slide-to="0"></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full"
+          aria-current="false"
+          aria-label="Slide 2"
+          data-carousel-slide-to="1"></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full"
+          aria-current="false"
+          aria-label="Slide 3"
+          data-carousel-slide-to="2"></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full"
+          aria-current="false"
+          aria-label="Slide 4"
+          data-carousel-slide-to="3"></button>
+          <button
+          type="button"
+          class="w-3 h-3 rounded-full"
+          aria-current="false"
+          aria-label="Slide 5"
+          data-carousel-slide-to="4"></button>
+          <button
+          type="button"
+          class="w-3 h-3 rounded-full"
+          aria-current="false"
+          aria-label="Slide 6"
+          data-carousel-slide-to="5"></button>
+      </div>
+      </div>
+      
+
+      </div>
+      
+      
+      
+      <div>
+        <p class="	mx-auto rounded-xl py-4 sm:px-6 lg:px-8 dark:text-gray-50">
+          <br />
+          <b>Our Mission</b> To expose the students around the area on STEM and to reveal the hidden
+          talents of each person.
+          <br />
+          <br /><b>Our Vision</b> Our vision is to show the capability of Thai engineering at its best
+          and emphasize the creativity of our members.
+          <br />
+        </p>
+        <h2 class="text-center dark:text-gray-50"><b>Key Values</b></h2>
+        <div class="py-4">
+          <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-4 mx-auto rounded-xl py-4 sm:px-6 lg:px-8">
+            <div class="bg-gray-200 p-4 rounded-xl hover:bg-gray-400 dark:bg-[#332940] dark:text-gray-50">
+              <h2 class="text-center font-bold">Work as a team, think as a team.</h2>
+    
+              <p>
+                A team cannot operate without a team, and an effective team needs to be open-minded and
+                creative in their own ways.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4 rounded-xl hover:bg-gray-400 dark:bg-[#332940] dark:text-gray-50">
+              <h2 class="text-center font-bold ">Think logically!</h2>
+    
+              <p>
+                We care about being right and it often takes reasoning from first principles to get
+                there.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4 rounded-xl hover:bg-gray-400 dark:bg-[#332940] dark:text-gray-50">
+              <h2 class="text-center font-bold ">Gracious professionalism</h2>
+    
+              <p>A slogan by the FIRST robotic. The pinnacle of being a good player.</p>
+            </div>
+            <div class="bg-gray-200 p-4 rounded-xl hover:bg-gray-400 dark:bg-[#332940] dark:text-gray-50">
+              <h2 class="text-center font-bold ">Situational flexibility</h2>
+    
+              <p>We aim to be prepared for every situation posted in the unforeseeable future.</p>
+            </div>
+    
+          </div>
+    
+          <div class="grid grid-cols-1 gap-4 py-4 mx-auto rounded-xl  sm:px-6 lg:px-8">
+            <div class="bg-gray-200 p-4 rounded-xl hover:bg-gray-400 dark:bg-[#332940] dark:text-gray-50">
+              <h2 class="text-center font-bold">Optimism</h2>
+    
+              <p class="text-center">
+                We had already won at the moment we are at the field. <br />
+                By just being in the competition, we had already won the grand prize of the competition,
+                experiences.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4 rounded-xl hover:bg-gray-400 dark:bg-[#332940] dark:text-gray-50">
+              <h2 class="text-center font-bold">The true meaning</h2>
+    
+              <p class="text-center">“Once a GEARS always a GEARS.”, NC GEARS.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="-mb-4 mt-8"><Footer /></div>
+</main>
 </body>
