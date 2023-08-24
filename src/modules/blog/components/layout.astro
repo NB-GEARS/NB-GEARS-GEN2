@@ -18,33 +18,34 @@ const { banner, title, subtitle } = data
 
 <AppLayout title={title} description={subtitle} image={banner.url}>
   <Navbar />
-<div class="mx-auto  max-w-7xl py-4  rounded-xl bg-neutral-200 pb-4 shadow-xl dark:bg-[#121212] mt-4">
-  <div class="mx-auto max-w-4xl ">
-    <div
-      class="overflow-hidden rounded-none bg-white shadow-xl dark:bg-[#332940] sm:rounded-2xl"
-      style={`view-transition-name: blog-${slug}`}
-    >
-      <div class="flex items-center justify-center overflow-hidden">
-        <Image
-          src={banner.url}
-          width="full"
-          height="auto"
-          placeholder={banner.placeholder}
-          alt="cover"
-          fetchPriority="high"
-        />
-      </div>
-      <div class="px-4 py-8 dark:text-gray-50 sm:px-6 lg:px-8">
-        <Heading {...Astro.props} />
+  <div
+    class="mx-auto mt-4 max-w-7xl rounded-xl bg-neutral-200 py-4 pb-4 shadow-xl dark:bg-[#121212]"
+  >
+    <div class="mx-auto max-w-4xl">
+      <div
+        class="overflow-hidden rounded-none bg-white shadow-xl dark:bg-[#332940] sm:rounded-2xl"
+        style={`view-transition-name: blog-${slug}`}
+      >
+        <div class="flex items-center justify-center overflow-hidden">
+          <Image
+            src={banner.url}
+            width="full"
+            height="auto"
+            placeholder={banner.placeholder}
+            alt="cover"
+            fetchPriority="high"
+          />
+        </div>
+        <div class="px-4 py-8 dark:text-gray-50 sm:px-6 lg:px-8">
+          <Heading {...Astro.props} />
 
-        <article
-          class="prose prose-blue mx-auto max-w-6xl pt-6 dark:prose-invert dark:text-gray-50"
-        >
-          <slot />
-        </article>
+          <article
+            class="prose prose-blue mx-auto max-w-6xl pt-6 dark:prose-invert dark:text-gray-50"
+          >
+            <slot />
+          </article>
+        </div>
       </div>
-    </div>
-    
-  </div><div class="-mb-4 mt-8"><Footer /></div>
+    </div><div class="-mb-4 mt-8"><Footer /></div>
+  </div>
 </AppLayout>
-</div>

@@ -18,8 +18,8 @@ export const get = async () => {
 
   return rss({
     title: 'Siravij Blog',
-    description: 'The Siravij Blog',
-    site: 'https://siravijbb.me/blog',
+    description: 'The NB GEARS Blog',
+    site: 'https://nbgears.tech/blog',
     items: rssItems,
   })
 }

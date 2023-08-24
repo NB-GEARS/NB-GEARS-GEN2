@@ -11,7 +11,7 @@ import { readingTime } from './src/modules/remark/readingTime.mjs'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://siravijbb.me/',
+  site: 'https://nbgears.tech/',
   compressHTML: true,
   integrations: [
     sitemap({
