@@ -1,0 +1,238 @@
+<script>
+  const statusPairs = [
+    [
+      'ไม่มีการใช้ร่างนี้แล้ว',
+      'ml-1 bg-gray-500 text-white px-2 pt-1 -mt-1 flex-initial rounded-xl',
+    ],
+  ]
+  const modelPairs = [
+    [
+      'Model 2D',
+      'mt-1 ml-1 bg-blue-500 text-white px-2 pt-1 flex-initial rounded-xl',
+    ],
+  ]
+
+  // StatusSection Component
+  function StatusSection(props) {
+    const statuses = props.statuses || []
+
+    const section = document.createElement('section4')
+    section.className = 'status-section4'
+
+    statuses.forEach(statusClassPair => {
+      const p = document.createElement('p')
+      p.className = statusClassPair[1]
+      p.textContent = statusClassPair[0]
+      section.appendChild(p)
+    })
+
+    return section
+  }
+
+  const statusSection = StatusSection({ statuses: statusPairs })
+  document.getElementById('statusSection4').appendChild(statusSection)
+
+  // ModelSection Component
+  function ModelSection(props) {
+    const models = props.models || []
+
+    const section = document.createElement('section4')
+    section.className = 'model-section4'
+
+    models.forEach(modelClassPair => {
+      const p = document.createElement('p')
+      p.className = modelClassPair[1]
+      p.textContent = modelClassPair[0]
+      section.appendChild(p)
+    })
+
+    return section
+  }
+
+  const modelSection = ModelSection({ models: modelPairs })
+  document.getElementById('modelSection4').appendChild(modelSection)
+</script>
+
+<div>
+  <!-- Modal toggle -->
+  <p
+    class="mx-1 mt-1 block items-center justify-center rounded-lg bg-neutral-200 text-center hover:bg-gray-400"
+  >
+    <button
+      data-modal-target="model41"
+      data-modal-toggle="model41"
+      class="h-full w-full py-2"
+      type="button"
+    >
+      <p class="text-center">
+        <img class="mx-auto h-28 w-auto" src="/model/model4.0.webp " />
+        Gen0 Polygon Project
+      </p></button
+    >
+  </p>
+
+  <!-- Main modal -->
+  <div
+    id="model41"
+    tabindex="-1"
+    aria-hidden="true"
+    class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full overflow-y-auto overflow-x-hidden p-4 md:inset-0"
+  >
+    <div class="relative max-h-full w-full max-w-2xl">
+      <!-- Modal content -->
+      <div class="relative rounded-lg bg-white shadow dark:bg-gray-700">
+        <!-- Modal header -->
+        <div
+          class="flex items-start justify-between rounded-t border-b p-4 dark:border-gray-600"
+        >
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+            Terms of Service
+          </h3>
+          <button
+            type="button"
+            class="ml-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+            data-modal-hide="Model41"
+          >
+            <svg
+              class="h-3 w-3"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
+            </svg>
+            <span class="sr-only">Close modal</span>
+          </button>
+        </div>
+        <!-- Modal body -->
+        <div class="space-y-6 p-6">
+          <article>
+            <h1>Gen0 Polygon Project</h1>
+            <div class="corosel4">
+              <div
+                id="default-carousel"
+                class="dd relative w-full"
+                data-carousel="slide"
+              >
+                <!-- Carousel wrapper -->
+                <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                  <!-- Item 1 -->
+                  <div class="ease-700 hidden ease-in-out" data-carousel-item>
+                    <img
+                      src="/model/model4.0.webp "
+                      class="absolute left-1/2 top-1/2 block h-32 w-auto -translate-x-1/2 -translate-y-1/2 md:h-96"
+                      alt="..."
+                    />
+                  </div>
+                  <!-- Item 2 -->
+                  <div class="ease-700 hidden ease-in-out" data-carousel-item>
+                    <img
+                      src="/model/model4.1.webp "
+                      class="absolute left-1/2 top-1/2 block h-32 w-auto -translate-x-1/2 -translate-y-1/2 md:h-96"
+                      alt="..."
+                    />
+                  </div>
+                  <!-- Item 3 -->
+                </div>
+                <!-- Slider indicators -->
+                <div
+                  class="absolute bottom-5 left-1/2 z-30 flex -translate-x-1/2 space-x-3 bg-gray-500"
+                >
+                  <button
+                    type="button"
+                    class="h-3 w-3 rounded-full"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                    data-carousel-slide-to="0"></button>
+                  <button
+                    type="button"
+                    class="h-3 w-3 rounded-full"
+                    aria-current="false"
+                    aria-label="Slide 2"
+                    data-carousel-slide-to="1"></button>
+                </div>
+                <!-- Slider controls -->
+                <button
+                  type="button"
+                  class="group absolute left-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
+                  data-carousel-prev
+                >
+                  <span
+                    class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gray-500 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70"
+                  >
+                    <svg
+                      class="h-4 w-4 text-white dark:text-gray-800"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 6 10"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 1 1 5l4 4"></path>
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                  </span>
+                </button>
+                <button
+                  type="button"
+                  class="group absolute right-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
+                  data-carousel-next
+                >
+                  <span
+                    class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gray-500 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70"
+                  >
+                    <svg
+                      class="h-4 w-4 text-white dark:text-gray-800"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 6 10"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 9 4-4-4-4"></path>
+                    </svg>
+                    <span class="sr-only">Next</span>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="mt-4 flex">
+              <p class="flex-none">
+                สถานะ:<p class="flex-initial" id="statusSection4"></p>
+              </p>
+            </div><div class="flex">
+              <p class="mt-2 flex-none flex-none">
+                รูปแบบ:<p id="modelSection4"></p>
+              </p><div></div>
+            </div>
+          </article>
+        </div>
+        <!-- Modal footer -->
+        <div
+          class="flex items-center space-x-2 rounded-b border-t border-gray-200 p-6 dark:border-gray-600"
+        >
+          <button
+            data-modal-hide="Model4"
+            type="button"
+            class="rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-900 focus:z-10 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:border-gray-500 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-600"
+            >ปิด</button
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

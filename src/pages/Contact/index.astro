@@ -19,19 +19,14 @@ import Footer from '../../components/Footer.astro'
 <main
   class="mx-auto my-[40px] -mb-0 mt-14 max-w-7xl rounded-xl bg-neutral-200 pb-4 shadow-xl dark:bg-[#121212]"
 >
-  <div class="-mt-10">
+  <div class="-mt-14">
     <div class="mx-auto rounded-xl py-4">
       <div
-        class="text-ellipsis rounded-lg bg-white px-6 pt-4 shadow-xl dark:bg-[#121212] dark:text-gray-50 lg:px-8"
+        class="text-ellipsis rounded-lg bg-white px-4 pt-4 shadow-xl dark:bg-[#332940] dark:text-gray-50 md:m-4 lg:px-8"
       >
-        <div
-          class=""
-          style="object-scale-down mx-auto pb-10 rounded-3xl "
-        >
-          <h1 class="margin: 40px; Bigcon text-center text-5xl md:text-left">
-            Contact us Via
-          </h1>
-          <p class="Maincon">
+        <div class="" style="mx-auto rounded-3xl ">
+          <h1 class="text-center text-2xl md:text-left">Contact us Via</h1>
+          <p class="">
             <br />Email:
             <a
               href="mailto:contact@nbgears.tech"
@@ -39,38 +34,48 @@ import Footer from '../../components/Footer.astro'
             >
           </p>
 
-          <p class="Maincon">
-            Locations<br />
-            KING MONGKUT'S UNIVERSITY OF TECHNOLOGY NORTH BANGKOK <br />
-            Thai-German Pre-Engineering School Building
-            <br />1518 Pracharat 1 Road,Wongsawang, Bangsue,
-            <br />Bangkok 10800<br /><br />
-            To travel to NB Gears, you can take the MRT to Bang Pho Station and take
-            bus via 32/33(2-6)/64/3-55/117.
-          </p>
+          <p class="">
+            <p>
+              Locations: <p></p>
+              <p>
+                KING MONGKUT'S UNIVERSITY OF TECHNOLOGY NORTH BANGKOK <p></p>
+                <p>
+                  Thai-German Pre-Engineering School Building <p></p>
+                  <p>
+                    1518 Pracharat 1 Road,Wongsawang, Bangsue, Bangkok 10800<p>
+                    </p>
+                    <p class="mt-2">
+                      To travel to NB Gears, you can take the MRT to Bang Pho
+                      Station and take bus via 32/33(2-6)/64/3-55/117.
+                    </p>
+                  </p>
 
-          <div class="align-items: center; Maincon">
-            <iframe
-              title="Location Map"
-              width="100%"
-              height="450"
-              style="border:0"
-              loading="lazy"
-              allowfullscreen
-              src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ92n5kZ6b4jAR7VYFdJYtz6I&key=AIzaSyCBbvQRlTEnbpx6UJ_udyTf7mSZlrtp3aE"
-            ></iframe>
-          </div>
+                  <div class="align-items: center; Maincon">
+                    <iframe
+                      title="Location Map"
+                      width="100%"
+                      height="450"
+                      style="border:0"
+                      loading="lazy"
+                      allowfullscreen
+                      src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ92n5kZ6b4jAR7VYFdJYtz6I&key=AIzaSyCBbvQRlTEnbpx6UJ_udyTf7mSZlrtp3aE"
+                    ></iframe>
+                  </div>
+                </p>
+              </p>
+            </p>
+          </p>
+          <div class="-mb-4 mt-8"><Footer /></div>
         </div>
+
+        <style>
+          @media (prefers-color-scheme: dark) {
+            .map {
+              filter: invert(0.9) saturate(0.5) hue-rotate(145deg);
+            }
+          }
+        </style>
       </div>
     </div>
   </div>
-  <div class="-mb-4 mt-8"><Footer /></div>
 </main>
-
-<style>
-  @media (prefers-color-scheme: dark) {
-    .map {
-      filter: invert(0.9) saturate(0.5) hue-rotate(145deg);
-    }
-  }
-</style>

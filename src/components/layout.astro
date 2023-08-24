@@ -8,14 +8,9 @@ export interface Props {
   image?: string
 }
 
-const {
-  title = '',
-  description = 'Siravij Personal Website',
-  image = '',
-} = Astro.props
+const { title = '', description = 'NB GEARS', image = '' } = Astro.props
 
-const transformedTitle =
-  title === '' ? 'Siravij Personal Website' : `Siravij · ${title}`
+const transformedTitle = title === '' ? 'NB GEARS' : `NB GEARS · ${title}`
 ---
 
 <!DOCTYPE html>
@@ -51,7 +46,7 @@ const transformedTitle =
     <meta property="twitter:image" content={image} />
   </head>
 
-  <body class="h-full w-full bg-white dark:bg-[#332940]">
+  <body class="h-full w-full bg-white dark:bg-[#121212]">
     <script
       is:inline
       src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"

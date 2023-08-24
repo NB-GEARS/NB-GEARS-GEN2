@@ -1,0 +1,77 @@
+---
+import Navbar from '../../components/Navbar.astro'
+import Layout from '../../components/layout.astro'
+import Footer from '../../components/Footer.astro'
+import Model1 from '../../components/aishamodel/model1.astro'
+import Model3 from '../../components/aishamodel/model3.astro'
+import Model5 from '../../components/aishamodel/model5.astro'
+import Model2 from '../../components/aishamodel/model2.astro'
+import Model4 from '../../components/aishamodel/model4.astro'
+import Model6 from '../../components/aishamodel/model6.astro'
+import Model7 from '../../components/aishamodel/model7.astro'
+import Model8 from '../../components/aishamodel/model8.astro'
+import Model9 from '../../components/aishamodel/model9.astro'
+import Model10 from '../../components/aishamodel/model10.astro'
+---
+
+<head>
+  <Layout
+    title="Home"
+    ,
+    description="Siravij's Website"
+    ,
+    image="/full-body.webp"
+    ,
+  />
+</head>
+
+<body>
+  <Navbar />
+  <main
+    class="mx-auto mt-14 max-w-7xl rounded-xl bg-neutral-200 pb-4 shadow-xl dark:bg-[#332940]"
+  >
+    <div class="-mt-14">
+      <div class="mx-auto rounded-xl py-4">
+        <div
+          class="text-ellipsis rounded-lg bg-white px-6 pt-4 shadow-xl dark:bg-[#332940] md:m-4 lg:px-8"
+        >
+          <h1 class="pb-4 text-2xl">About Us</h1>
+          <img
+            src="NR_Gear_logo_white.png"
+            class="flex w-full items-center space-x-28 rounded-2xl bg-gray-900 p-5 md:block md:w-auto"
+            alt="NORTH BANGKOK GEEKS ENGINEERING AWESOME ROBOTIC SOLUTIONS"
+          />
+          <p class="pt-4">
+            &nbsp;&nbsp;&nbsp;Our story began by Mr.Punroon who was veteran
+            member of NC GEARS, He was paticipated in FTC 2021 which he has a
+            dream of FTC Team in thailand in our school.he wants to create a
+            team to inspire the newer generation of young people to have
+            experience with robotic events and improve their engineering skill
+            in practical applications. One of our goals is to prove that
+            teenagers that live in Bangkok also have the potential for
+            competition. Via a connection with the NC GEARS team, they are able
+            to give us the guidance into starting a proper team. Our team's
+            name, "NB GEARS: stands for "North Bangkok Geeks Engineering Awesome
+            Robotic Solutions" similar to our advising team.
+          </p>
+          <div class="p-5 dark:border-gray-700 dark:bg-gray-900">
+            <ul>
+              <p class="mb-2 text-gray-500 dark:text-gray-400">
+                <li class="-mt-3 text-gray-500 dark:text-gray-400"></li>
+                <div class="grind grid grid-cols-3 py-4">
+                  <Model1 /><Model2 />
+                  <Model3 /><Model4 />
+                  <Model5 /><Model6 />
+                  <Model7 /><Model8 />
+                  <Model9 /><Model10 />
+                </div>
+              </p>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="-mb-7 mt-8"><Footer /></div>
+  </main>
+</body>

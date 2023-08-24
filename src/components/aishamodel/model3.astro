@@ -1,0 +1,149 @@
+<script>
+  const statusPairs = [
+    [
+      'ไม่มีการใช้ร่างนี้แล้ว',
+      'ml-1 bg-gray-500 text-white px-2 pt-1 -mt-1 flex-initial rounded-xl',
+    ],
+  ]
+  const modelPairs = [
+    [
+      'Model 3D',
+      'mt-1 ml-1 bg-blue-500 text-white px-2 pt-1 flex-initial rounded-xl',
+    ],
+  ]
+
+  // StatusSection Component
+  function StatusSection(props) {
+    const statuses = props.statuses || []
+
+    const section = document.createElement('section')
+    section.className = 'status-section'
+
+    statuses.forEach(statusClassPair => {
+      const p = document.createElement('p')
+      p.className = statusClassPair[1]
+      p.textContent = statusClassPair[0]
+      section.appendChild(p)
+    })
+
+    return section
+  }
+
+  const statusSection = StatusSection({ statuses: statusPairs })
+  document.getElementById('statusSection2').appendChild(statusSection)
+
+  // ModelSection Component
+  function ModelSection(props) {
+    const models = props.models || []
+
+    const section = document.createElement('section')
+    section.className = 'model-section2'
+
+    models.forEach(modelClassPair => {
+      const p = document.createElement('p')
+      p.className = modelClassPair[1]
+      p.textContent = modelClassPair[0]
+      section.appendChild(p)
+    })
+
+    return section
+  }
+
+  const modelSection = ModelSection({ models: modelPairs })
+  document.getElementById('modelSection2').appendChild(modelSection)
+</script>
+
+<div>
+  <!-- Modal toggle -->
+  <p
+    class="mx-1 mt-1 block items-center justify-center rounded-lg bg-neutral-200 text-center hover:bg-gray-400"
+  >
+    <button
+      data-modal-target="Model3"
+      data-modal-toggle="Model3"
+      class="h-full w-full py-2"
+      type="button"
+    >
+      <p class="text-center">
+        <img class="mx-auto h-28 w-auto" src="/model/model3.0.webp " />
+        ร่างสอง (ชุดไอดอล)
+      </p></button
+    >
+  </p>
+
+  <!-- Main modal -->
+  <div
+    id="Model3"
+    tabindex="-1"
+    aria-hidden="true"
+    class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full overflow-y-auto overflow-x-hidden p-4 md:inset-0"
+  >
+    <div class="relative max-h-full w-full max-w-2xl">
+      <!-- Modal content -->
+      <div class="relative rounded-lg bg-white shadow dark:bg-gray-700">
+        <!-- Modal header -->
+        <div
+          class="flex items-start justify-between rounded-t border-b p-4 dark:border-gray-600"
+        >
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+            Terms of Service
+          </h3>
+          <button
+            type="button"
+            class="ml-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+            data-modal-hide="Model3"
+          >
+            <svg
+              class="h-3 w-3"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
+            </svg>
+            <span class="sr-only">Close modal</span>
+          </button>
+        </div>
+        <!-- Modal body -->
+        <div class="space-y-6 p-6">
+          <article>
+            <h1>ร่างสอง (ชุดไอดอล)</h1>
+            <div id="coro">
+              <img
+                class="mx-auto h-32 w-auto md:h-96"
+                src="/model/model3.0.webp "
+              />
+            </div>
+            <div class="mt-4 flex">
+              <p id="pictureCarousel"></p>
+              <p class="flex-none">
+                สถานะ:<p class="flex-initial" id="statusSection2"></p>
+              </p>
+            </div><div class="flex">
+              <p class="mt-2 flex-none">
+                รูปแบบ:<p id="modelSection2"></p>
+              </p><div></div>
+            </div>
+          </article>
+        </div>
+        <!-- Modal footer -->
+        <div
+          class="flex items-center space-x-2 rounded-b border-t border-gray-200 p-6 dark:border-gray-600"
+        >
+          <button
+            data-modal-hide="Model3"
+            type="button"
+            class="rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-900 focus:z-10 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:border-gray-500 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-600"
+            >ปิด</button
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
