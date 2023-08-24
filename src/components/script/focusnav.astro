@@ -37,6 +37,9 @@
     highlightLink('a[href="/Contact"]')
 
     // Add more links to highlight for the "other-page" here if needed
+  } else if (currentPath.includes('/about-us')) {
+    highlightLink('a[href="/about-us"]')
+    // highlightLink("#dropdownNavbarLink");
   } else if (currentPath.includes('/#another-page')) {
     highlightLink('a[href="/another-page"]')
     // highlightLink("#dropdownNavbarLink");
