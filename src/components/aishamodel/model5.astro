@@ -1,13 +1,17 @@
+---
+import Siravijcontact from '../../components/contact/siravij.astro'
+---
+
 <script>
   const statusPairs = [
     [
-      'ไม่มีการใช้ร่างนี้แล้ว',
+      'Electrical Engineer',
       'ml-1 bg-gray-500 text-white px-2 pt-1 -mt-1 flex-initial rounded-xl',
     ],
   ]
   const modelPairs = [
     [
-      'Model 3D',
+      'Design electrical system',
       'mt-1 ml-1 bg-blue-500 text-white px-2 pt-1 flex-initial rounded-xl',
     ],
   ]
@@ -98,7 +102,7 @@
           class="flex items-start justify-between rounded-t border-b p-4 dark:border-gray-600"
         >
           <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-            Terms of Service
+            Siravij Praevisavakij
           </h3>
           <button
             type="button"
@@ -125,7 +129,6 @@
         <!-- Modal body -->
         <div class="space-y-6 p-6">
           <article>
-            <h1>Aisha KPOP</h1>
             <div class="corosel4">
               <div
                 id="default-carousel"
@@ -222,27 +225,39 @@
                 </button>
               </div>
             </div>
-            <div class="mt-4 flex">
-              <p class="flex-none">
-                สถานะ:<p class="flex-initial" id="statusSection5"></p>
-              </p>
-            </div><div class="flex">
-              <p class="mt-2 flex-none flex-none">
-                รูปแบบ:<p id="modelsection5"></p>
-              </p><div></div>
+            <div>
+              <div class="mt-4 flex">
+                <p class="flex-none">
+                  Position:<p class="flex-initial" id="statusSection5"></p>
+                </p>
+              </div>
+              <div class="flex">
+                <p class="mt-2 flex-none">
+                  Job:<p id="modelsection5"></p>
+                </p>
+                <div></div>
+              </div>
+              <div class="flex">
+                <p class="mt-2 flex">Contact:</p><Siravijcontact />
+              </div>
+              <div class="flex">
+                <p class="">About me:</p><p class="ml-1">
+                  Aisha vTuber Fanclub,Sattlelite builder
+                </p>
+              </div>
+            </div>
+            <!-- Modal footer -->
+            <div
+              class="flex items-center space-x-2 rounded-b border-t border-gray-200 p-6 dark:border-gray-600"
+            >
+              <button
+                data-modal-hide="Model5"
+                type="button"
+                class="rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-900 focus:z-10 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:border-gray-500 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-600"
+                >ปิด</button
+              >
             </div>
           </article>
-        </div>
-        <!-- Modal footer -->
-        <div
-          class="flex items-center space-x-2 rounded-b border-t border-gray-200 p-6 dark:border-gray-600"
-        >
-          <button
-            data-modal-hide="Model5"
-            type="button"
-            class="rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-900 focus:z-10 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:border-gray-500 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-600"
-            >ปิด</button
-          >
         </div>
       </div>
     </div>
