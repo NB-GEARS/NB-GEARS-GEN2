@@ -16,8 +16,8 @@
   function StatusSection(props) {
     const statuses = props.statuses || []
 
-    const section = document.createElement('section10')
-    section.className = 'status-section10'
+    const section = document.createElement('section12')
+    section.className = 'status-section12'
 
     statuses.forEach(statusClassPair => {
       const p = document.createElement('p')
@@ -30,14 +30,14 @@
   }
 
   const statusSection = StatusSection({ statuses: statusPairs })
-  document.getElementById('statussection10').appendChild(statusSection)
+  document.getElementById('statussection12').appendChild(statusSection)
 
   // ModelSection Component
   function ModelSection(props) {
     const models = props.models || []
 
-    const section = document.createElement('section10')
-    section.className = 'model-section10'
+    const section = document.createElement('section12')
+    section.className = 'model-section12'
 
     models.forEach(modelClassPair => {
       const p = document.createElement('p')
@@ -50,12 +50,12 @@
   }
 
   const modelSection = ModelSection({ models: modelPairs })
-  document.getElementById('modelsection10').appendChild(modelSection)
+  document.getElementById('modelsection12').appendChild(modelSection)
 </script>
 
 <div>
   <!-- Modal toggle -->
-  <div class="">
+  <div class="mx-auto max-w-xs">
     <button
       data-modal-target="model12"
       data-modal-toggle="model12"
@@ -69,8 +69,10 @@
         <div class="bg-gray-500">
           <img
             class="mx-auto w-auto sm:h-24 md:h-56"
-            src="/member/sutitnan.png"
+            src="/member/webp/sutitnan.webp"
             alt="avatar"
+            height="auto"
+            width="auto"
           />
         </div>
         <div class="">
@@ -228,11 +230,11 @@
             </div>
             <div class="mt-4 flex">
               <p class="flex-none">
-                สถานะ:<p class="flex-initial" id="statussection10"></p>
+                สถานะ:<p class="flex-initial" id="statussection12"></p>
               </p>
             </div><div class="flex">
               <p class="mt-2 flex-none flex-none">
-                รูปแบบ:<p id="modelsection10"></p>
+                รูปแบบ:<p id="modelsection12"></p>
               </p><div></div>
             </div>
           </article>
