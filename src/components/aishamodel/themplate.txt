@@ -69,7 +69,7 @@
         <div class="bg-gray-500">
           <img
             class="mx-auto w-auto sm:h-24 md:h-56"
-            src="/member/webp/jirachai.png"
+            src="/member/webp/jirachai"
                         alt="avatar"
             height="auto"
             width="auto"
