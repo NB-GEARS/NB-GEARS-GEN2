@@ -1,13 +1,17 @@
+---
+import Contact from '../contact/Contact.astro'
+---
+
 <script>
   const statusPairs = [
     [
-      'ไม่มีการใช้ร่างนี้แล้ว',
+      'Advisor of NB GEARS',
       'ml-1 bg-gray-500 text-white px-2 pt-1 -mt-1 flex-initial rounded-xl',
     ],
   ]
   const modelPairs = [
     [
-      'Model 3D',
+      'Advisor in Object regognition',
       'mt-1 ml-1 bg-blue-500 text-white px-2 pt-1 flex-initial rounded-xl',
     ],
   ]
@@ -17,7 +21,7 @@
     const statuses = props.statuses || []
 
     const section = document.createElement('section2')
-    section.className = 'status-section1'
+    section.className = 'status-section2'
 
     statuses.forEach(statusClassPair => {
       const p = document.createElement('p')
@@ -30,14 +34,14 @@
   }
 
   const statusSection = StatusSection({ statuses: statusPairs })
-  document.getElementById('statusSection1').appendChild(statusSection)
+  document.getElementById('statusSection2').appendChild(statusSection)
 
   // ModelSection Component
   function ModelSection(props) {
     const models = props.models || []
 
     const section = document.createElement('section2')
-    section.className = 'model-section1'
+    section.className = 'model-section2'
 
     models.forEach(modelClassPair => {
       const p = document.createElement('p')
@@ -50,7 +54,7 @@
   }
 
   const modelSection = ModelSection({ models: modelPairs })
-  document.getElementById('modelSection1').appendChild(modelSection)
+  document.getElementById('modelsection2').appendChild(modelSection)
 </script>
 
 <div>
@@ -100,7 +104,7 @@
           class="flex items-start justify-between rounded-t border-b p-4 dark:border-gray-600"
         >
           <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-            Terms of Service
+            Prasertsak Tiawongsombat
           </h3>
           <button
             type="button"
@@ -127,7 +131,6 @@
         <!-- Modal body -->
         <div class="space-y-6 p-6">
           <article>
-            <h1>ร่างที่สอง</h1>
             <div id="coro">
               <div
                 id="default-carousel"
@@ -139,7 +142,7 @@
                   <!-- Item 1 -->
                   <div class="ease-700 hidden ease-in-out" data-carousel-item>
                     <img
-                      src="/model/model2.0.webp "
+                      src="/member/webp/prasertsak.webp"
                       class="absolute left-1/2 top-1/2 block h-32 w-auto -translate-x-1/2 -translate-y-1/2 md:h-96"
                       alt="..."
                     />
@@ -147,7 +150,7 @@
                   <!-- Item 2 -->
                   <div class="ease-700 hidden ease-in-out" data-carousel-item>
                     <img
-                      src="/model/model2.1.webp "
+                      src="/favicon.webp"
                       class="absolute left-1/2 top-1/2 block h-32 w-auto -translate-x-1/2 -translate-y-1/2 md:h-96"
                       alt="..."
                     />
@@ -223,15 +226,26 @@
                 </button>
               </div>
             </div>
-            <div class="mt-4 flex">
-              <p id="pictureCarousel"></p>
-              <p class="flex-none">
-                สถานะ:<p class="flex-initial" id="statusSection1"></p>
-              </p>
-            </div><div class="flex">
-              <p class="mt-2 flex-none flex-none">
-                รูปแบบ:<p id="modelSection1"></p>
-              </p><div></div>
+            <div class="text-sm md:text-lg">
+              <div class="mt-4 flex">
+                <p class="flex-none">
+                  Position:<p class="flex-initial" id="statusSection2"></p>
+                </p>
+              </div>
+              <div class="flex">
+                <p class="mt-2 flex-none">
+                  Responsibility:<p id="modelsection2"></p>
+                </p>
+                <div></div>
+              </div>
+              <div class="flex">
+                <p class="mt-2 flex">Contact:</p>
+                <a
+                  class="ml-1 mt-1 flex-initial rounded-xl bg-blue-500 px-2 pt-1 text-white"
+                  href="http://prasertsakt.staff.kmutnb.ac.th/"
+                  >http://prasertsakt.staff.kmutnb.ac.th/
+                </a>
+              </div>
             </div>
           </article>
         </div>
@@ -243,7 +257,12 @@
             data-modal-hide="Model2"
             type="button"
             class="rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-900 focus:z-10 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:border-gray-500 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-600"
-            >ปิด</button
+            >Close</button
+          >
+          <a
+            href="http://prasertsakt.staff.kmutnb.ac.th/"
+            class="rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-900 focus:z-10 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:border-gray-500 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-600"
+            >Personal Website</a
           >
         </div>
       </div>

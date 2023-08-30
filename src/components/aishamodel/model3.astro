@@ -1,7 +1,7 @@
 <script>
   const statusPairs = [
     [
-      'ไม่มีการใช้ร่างนี้แล้ว',
+      'ไม่มีการใช้ร่างนี้แล้ว2',
       'ml-1 bg-gray-500 text-white px-2 pt-1 -mt-1 flex-initial rounded-xl',
     ],
   ]
@@ -30,14 +30,14 @@
   }
 
   const statusSection = StatusSection({ statuses: statusPairs })
-  document.getElementById('statusSection2').appendChild(statusSection)
+  document.getElementById('statusSection3').appendChild(statusSection)
 
   // ModelSection Component
   function ModelSection(props) {
     const models = props.models || []
 
     const section = document.createElement('section')
-    section.className = 'model-section2'
+    section.className = 'model-Section3'
 
     models.forEach(modelClassPair => {
       const p = document.createElement('p')
@@ -50,7 +50,7 @@
   }
 
   const modelSection = ModelSection({ models: modelPairs })
-  document.getElementById('modelSection2').appendChild(modelSection)
+  document.getElementById('modelSection3').appendChild(modelSection)
 </script>
 
 <div>
@@ -61,6 +61,7 @@
       data-modal-toggle="Model3"
       class="h-full w-full py-2"
       type="button"
+      disabled
     >
       <div
         class="overflow-hidden rounded-lg bg-white shadow-lg hover:bg-neutral-200 hover:shadow-2xl"
@@ -135,11 +136,11 @@
             <div class="mt-4 flex">
               <p id="pictureCarousel"></p>
               <p class="flex-none">
-                สถานะ:<p class="flex-initial" id="statusSection2"></p>
+                สถานะ:<p class="flex-initial" id="statusSection3"></p>
               </p>
             </div><div class="flex">
               <p class="mt-2 flex-none">
-                รูปแบบ:<p id="modelSection2"></p>
+                รูปแบบ:<p id="modelSection3"></p>
               </p><div></div>
             </div>
           </article>

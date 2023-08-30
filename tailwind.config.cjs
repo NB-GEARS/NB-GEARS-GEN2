@@ -6,7 +6,7 @@ module.exports = {
     './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue,mjs}',
     './node_modules/flowbite/**/*.js',
   ],
-  darkMode: 'media',
+  darkMode: 'class',
   mode: 'jit',
   theme: {
     extend: {
