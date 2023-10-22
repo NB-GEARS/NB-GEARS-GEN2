@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar.astro'
 import Layout from '../components/layout.astro'
 import Footer from '../components/Footer.astro'
 import Corousel from '../components/Corousel/Corousel.astro'
+import Typewriter from '../components/script/nbGearsWritter.astro'
 ---
 
 <head>
@@ -28,97 +29,108 @@ import Corousel from '../components/Corousel/Corousel.astro'
         >
           <Corousel />
           <div>
-            <p class="my-6 space-y-4 sm:text-xs md:text-base">
+            <p class="my-6 space-y-4">
               <p
-                class="mx-auto rounded-xl dark:text-gray-50 sm:text-xs md:text-base lg:px-8"
+                class="md:flex-inline mx-auto truncate rounded-xl text-center text-base dark:text-gray-50 sm:block md:text-xl"
               >
-                <b>Our Mission</b> To expose the students around the area on STEM
-                and to reveal the hidden talents of each person.
-              </p>
-              <p
-                class="mx-auto rounded-xl pt-2 dark:text-gray-50 sm:text-xs md:text-base lg:px-8"
-              >
-                <b>Our Vision</b> Our vision is to show the capability of Thai engineering
-                at its best and emphasize the creativity of our members.
+                Welcome to <Typewriter /><b class="text-lg text-[#F99011]">
+                  <b id="typewriter" class="truncate"></b></b
+                >
+                <p
+                  class="mx-auto rounded-xl pt-2 dark:text-gray-50 sm:text-xs md:text-base lg:px-8"
+                >
+                  <b>Our Mission</b> To expose the students around the area on STEM
+                  and to reveal the hidden talents of each person.
+                </p>
+                <p
+                  class="mx-auto rounded-xl pt-2 dark:text-gray-50 sm:text-xs md:text-base lg:px-8"
+                >
+                  <b>Our Vision</b> Our vision is to show the capability of Thai
+                  engineering at its best and emphasize the creativity of our members.
+                </p>
               </p>
             </p>
-          </div>
 
-          <div class="py-4 sm:text-xs md:text-base">
-            <h2 class="text-center dark:text-gray-50"><b>Key Values</b></h2>
-            <div
-              class="mx-auto grid gap-4 rounded-xl py-4 sm:grid-cols-1 sm:px-6 md:grid-cols-2 lg:px-8"
-            >
+            <div class="py-4 sm:text-xs md:text-base">
+              <h2 class="text-center dark:text-gray-50"><b>Key Values</b></h2>
               <div
-                class="rounded-xl bg-gray-200 p-4 hover:bg-gray-400 dark:border-2 dark:border-amber-50 dark:bg-[#332940] dark:text-gray-50"
+                class="mx-auto grid gap-4 rounded-xl py-4 sm:grid-cols-1 sm:px-6 md:grid-cols-2 lg:px-8"
               >
-                <h2 class="text-center font-bold">
-                  Work as a team, think as a team.
-                </h2>
+                <div
+                  class="rounded-xl bg-gray-200 p-4 hover:bg-gray-400 dark:border-2 dark:border-amber-50 dark:bg-[#332940] dark:text-gray-50"
+                >
+                  <h2 class="text-center font-bold">
+                    Work as a team, think as a team.
+                  </h2>
 
-                <p>
-                  A team cannot operate without a team, and an effective team
-                  needs to be open-minded and creative in their own ways.
-                </p>
+                  <p>
+                    A team cannot operate without a team, and an effective team
+                    needs to be open-minded and creative in their own ways.
+                  </p>
+                </div>
+                <div
+                  class="rounded-xl bg-gray-200 p-4 hover:bg-gray-400 dark:border-2 dark:border-amber-50 dark:bg-[#332940] dark:text-gray-50"
+                >
+                  <h2 class="text-center font-bold">Think logically!</h2>
+
+                  <p>
+                    We care about being right and it often takes reasoning from
+                    first principles to get there.
+                  </p>
+                </div>
+                <div
+                  class="rounded-xl bg-gray-200 p-4 hover:bg-gray-400 dark:border-2 dark:border-amber-50 dark:bg-[#332940] dark:text-gray-50"
+                >
+                  <h2 class="text-center font-bold">
+                    Gracious professionalism
+                  </h2>
+
+                  <p>
+                    A slogan by the FIRST robotic. The pinnacle of being a good
+                    player.
+                  </p>
+                </div>
+                <div
+                  class="rounded-xl bg-gray-200 p-4 hover:bg-gray-400 dark:border-2 dark:border-amber-50 dark:bg-[#332940] dark:text-gray-50"
+                >
+                  <h2 class="text-center font-bold">Situational flexibility</h2>
+
+                  <p>
+                    We aim to be prepared for every situation posted in the
+                    unforeseeable future.
+                  </p>
+                </div>
               </div>
-              <div
-                class="rounded-xl bg-gray-200 p-4 hover:bg-gray-400 dark:border-2 dark:border-amber-50 dark:bg-[#332940] dark:text-gray-50"
-              >
-                <h2 class="text-center font-bold">Think logically!</h2>
 
-                <p>
-                  We care about being right and it often takes reasoning from
-                  first principles to get there.
-                </p>
-              </div>
               <div
-                class="rounded-xl bg-gray-200 p-4 hover:bg-gray-400 dark:border-2 dark:border-amber-50 dark:bg-[#332940] dark:text-gray-50"
+                class="mx-auto grid grid-cols-1 gap-4 rounded-xl py-4 lg:px-8"
               >
-                <h2 class="text-center font-bold">Gracious professionalism</h2>
+                <div
+                  class="rounded-xl bg-gray-200 p-4 hover:bg-gray-400 dark:border-2 dark:border-amber-50 dark:bg-[#332940] dark:text-gray-50"
+                >
+                  <h2 class="text-center font-bold">Optimism</h2>
 
-                <p>
-                  A slogan by the FIRST robotic. The pinnacle of being a good
-                  player.
-                </p>
-              </div>
-              <div
-                class="rounded-xl bg-gray-200 p-4 hover:bg-gray-400 dark:border-2 dark:border-amber-50 dark:bg-[#332940] dark:text-gray-50"
-              >
-                <h2 class="text-center font-bold">Situational flexibility</h2>
-
-                <p>
-                  We aim to be prepared for every situation posted in the
-                  unforeseeable future.
-                </p>
-              </div>
-            </div>
-
-            <div class="mx-auto grid grid-cols-1 gap-4 rounded-xl py-4 lg:px-8">
-              <div
-                class="rounded-xl bg-gray-200 p-4 hover:bg-gray-400 dark:border-2 dark:border-amber-50 dark:bg-[#332940] dark:text-gray-50"
-              >
-                <h2 class="text-center font-bold">Optimism</h2>
-
-                <p class="text-center">
-                  We had already won at the moment we are at the field. <br />
-                  By just being in the competition, we had already won the grand
-                  prize of the competition, experiences.
-                </p>
-              </div>
-              <div
-                class="rounded-xl bg-gray-200 p-4 hover:bg-gray-400 dark:border-2 dark:border-amber-50 dark:bg-[#332940] dark:text-gray-50"
-              >
-                <h2 class="text-center font-bold">The true meaning</h2>
-                <p class="text-center">
-                  “Once a GEARS always a GEARS.”, NC GEARS.
-                </p>
+                  <p class="text-center">
+                    We had already won at the moment we are at the field. <br />
+                    By just being in the competition, we had already won the grand
+                    prize of the competition, experiences.
+                  </p>
+                </div>
+                <div
+                  class="rounded-xl bg-gray-200 p-4 hover:bg-gray-400 dark:border-2 dark:border-amber-50 dark:bg-[#332940] dark:text-gray-50"
+                >
+                  <h2 class="text-center font-bold">The true meaning</h2>
+                  <p class="text-center">
+                    “Once a GEARS always a GEARS.”, NC GEARS.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="-mb-4 mt-8"><Footer /></div>
+      <div class="-mb-4 mt-8"><Footer /></div>
+    </div>
   </main>
 </body>
