@@ -29,21 +29,25 @@ import Typewriter from '../components/script/nbGearsWritter.astro'
         >
           <Corousel />
           <div>
-            <section class="my-6 space-y-4">
+            <section class="my-6 grid grid-cols-1 space-y-4">
               <p
-                class="md:flex-inline mx-auto truncate rounded-xl text-center text-base dark:text-gray-50 sm:block md:text-xl"
+                class="md:flex-inline mx-auto truncate rounded-xl bg-gray-900 text-center text-xl dark:text-gray-50 sm:block md:text-xl"
               >
-                Welcome to <Typewriter /><b class="text-lg text-[#F99011]">
-                  <b id="typewriter" class="truncate"></b></b
-                >
                 <p
-                  class="mx-auto rounded-xl pt-2 dark:text-gray-50 sm:text-xs md:text-base lg:px-8"
+                  class="md:flex-inline mx-full truncate rounded-xl bg-gray-900 p-1 text-center text-xl text-[#E8E8E8] dark:text-gray-50 sm:block md:mx-auto md:text-xl"
+                >
+                  Welcome to <Typewriter /><b class="text-lg text-[#F99011]">
+                    <b id="typewriter" class="truncate"></b></b
+                  >
+                </p>
+                <p
+                  class="mx-full rounded-xl pt-2 dark:text-gray-50 sm:text-xs md:text-base lg:px-8"
                 >
                   <b>Our Mission</b> To expose the students around the area on STEM
                   and to reveal the hidden talents of each person.
                 </p>
                 <p
-                  class="mx-auto rounded-xl pt-2 dark:text-gray-50 sm:text-xs md:text-base lg:px-8"
+                  class="mx-full rounded-xl pt-2 dark:text-gray-50 sm:text-xs md:text-base lg:px-8"
                 >
                   <b>Our Vision</b> Our vision is to show the capability of Thai
                   engineering at its best and emphasize the creativity of our members.
@@ -52,7 +56,9 @@ import Typewriter from '../components/script/nbGearsWritter.astro'
             </section>
 
             <section class="py-4 sm:text-xs md:text-base">
-              <h2 class="text-center dark:text-gray-50"><b>Key Values</b></h2>
+              <h2 class="text-center dark:text-gray-50">
+                <b>Our Key Values</b>
+              </h2>
               <div
                 class="mx-auto grid gap-4 rounded-xl py-4 sm:grid-cols-1 sm:px-6 md:grid-cols-2 lg:px-8"
               >
@@ -103,7 +109,7 @@ import Typewriter from '../components/script/nbGearsWritter.astro'
               </div>
 
               <div
-                class="mx-auto grid grid-cols-1 gap-4 rounded-xl py-4 lg:px-8"
+                class="mx-auto grid gap-4 rounded-xl sm:grid-cols-1 sm:px-6 lg:px-8"
               >
                 <div
                   class="rounded-xl bg-gray-200 p-4 hover:bg-gray-400 dark:border-2 dark:border-amber-50 dark:bg-[#332940] dark:text-gray-50"
